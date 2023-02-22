@@ -1,0 +1,105 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark navbar-floating">
+    
+    <div class="container">
+      <a class="navbar-brand" href="/home">
+        <img src="{% static '' %}assets/favicon-light.png" alt="" width="40" >
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav ml-lg-5 mt-3 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item active" href="/facebookapp/token">Facebook</a>
+              <a class="dropdown-item" href="/website/new">Twitter</a>
+              <a class="dropdown-item" href="/ytb/new">YouTube</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HowItWorks">How It Works</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/contactus/">Contact</a>
+          </li>
+        </ul>
+        
+        <div class="ml-auto my-2 my-lg-0" >
+          <ul>
+            {% if user.id is not None %}
+            <a class="btn btn-light btn-split-icon rounded-pill"
+              style="color: #212529;background-color: #f8f9fa;padding: 5px 10px;
+              border-width: 0px;"  
+              href="/home">
+              <span class="icon mai-person" 
+                style="display: inline-block;
+                margin-right: 5px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                line-height: 40px;
+                color: #000000;
+                background-color: #f0f0f0b6;">
+              </span>{{user.last_name}} {{user.first_name}}
+            </a>
+
+
+          <a class="btn btn-light btn-split-icon rounded-pill"
+            style="color: #212529;background-color: #f8f9fa;padding: 5px 12px;
+            border-width: 0px;"
+            href="/logout" >
+            <span class="icon mai-log-out" 
+              style="display: inline-block;
+              margin-right: 5px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              line-height: 40px;
+              color: #000000;
+              background-color: #f0f0f0b6;">
+            </span>Logout
+          </a>
+
+
+            {% else %}
+            <a class="btn btn-light btn-split-icon rounded-pill"
+              style="color: #212529;background-color: #f8f9fa;" 
+              href="/login">
+              <span class="icon mai-log-in" 
+              style="display: inline-block;
+              margin-right: 5px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              line-height: 40px;
+              color: #000000;
+              background-color: #f0f0f0b6;"></span>login
+            </a>
+
+            <a class="btn btn-light btn-split-icon rounded-pill"
+              style="color: #212529;background-color: #f8f9fa;"
+              href="/register">
+              <span class="icon mai-person-add"
+              style="display: inline-block;
+              margin-right: 5px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              line-height: 40px;
+              color: #000000;
+              background-color: #f0f0f0b6;"></span>register
+            </a>
+
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

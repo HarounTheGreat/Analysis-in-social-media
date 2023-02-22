@@ -1,0 +1,170 @@
+{% extends 'homebase1.html' %}
+{% load static %}
+{% block title %}{{setting.titlePageHowitworks}} {{search}}{% endblock %}
+{% load crispy_forms_tags %}
+
+
+{% block body %} 
+
+<div class="bg-light">
+
+  <div class="page-hero-section bg-image hero-mini" style="background-image: url({% static '' %}assets/img/hero_mini.svg);">
+    <div class="hero-caption">
+      <div class="container fg-white h-100">
+        <div class="row justify-content-center align-items-center text-center h-100">
+          <div class="col-lg-6">
+            <h3 class="mb-4 fw-medium">How It Works</h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
+                <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">How It Works</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- FAQ -->
+<div class="page-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5 py-3 wow fadeInUp">
+        <h1 class="mb-4">How It Works ? </h1>
+        <h6>This page answers the question by explaining how our site works in a simple and very detaild way.</h6>
+        <div class="col-lg-5 py-3">
+
+            <img src="{% static '' %}assets/img/1620684483411 (1).png" alt="">
+          
+        </div>
+
+        
+      </div>
+      <div class="col-lg-7 py-3 no-scroll-x">
+        <div class="accordion accordion-gap" id="accordionFAQ">
+          <div class="accordion-item wow fadeInRight">
+            <div class="accordion-trigger" id="headingFour">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Facebook (step1 Enter Access Token)</button>
+            </div>
+            <div id="collapse1" class="collapse" aria-labelledby="headingFour" data-parent="#accordionFAQ">
+              <div class="accordion-content">
+                <p>first of all, you need to enter your own access token</p>
+                <ol>
+                  <B><li>create access token:</li></B>
+                  <img src="{% static '' %}assets/img/t122.jpg" alt="">
+                  <p>From this<a  href="https://www.sociablekit.com/how-to-get-a-facebook-page-access-token"> link </a> , you can learn how to create an access token </p>
+                  <B><li>save your access token</li></B>
+                      <ul style="list-style-type:square">
+                      <li>if you don't save access token before, click on <B>"Don't have access token"</B></li>
+                        <img src="{% static '' %}assets/img/Don't have access token .jpg" alt=""> </br>
+                         paste it and click <B>"Save Access Token"</B>
+                        <img src="{% static '' %}assets/img/Save access taoken.jpg" alt=""> </br>
+                      <li>if you want to update your access token, click on <B>"Update access token"</B></li>
+                        <img src="{% static '' %}assets/img/Update access token.jpg" alt="">
+                        paste it and click <B>"Update access token"</B>
+                        <img src="{% static '' %}assets/img/Update access token page.jpg" alt="">
+                      <li>if you want to use your recent Access Token click on <B>"i already have access token"</B></li>
+                        <img src="{% static '' %}assets/img/i already have access token.jpg" alt="">
+                      </ul>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item wow fadeInRight">
+            <div class="accordion-trigger" id="headingFive">
+              <button class="btn" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Facebook (step 2)</button>
+            </div>
+            <div id="collapse2" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionFAQ">
+              <div class="accordion-content">
+                <ol>
+                  <li> <B><p>we need the url link of your facebook post.</br></B> copy the post URL link:</p></li>
+          
+                  <img src="{% static '' %}assets/img/url-fb (2).jpg" alt="">
+                  <li>Next put the Link and click <B>"submit"</B>:</li>
+                  <img src="{% static '' %}assets/img/Capture d’écran (85).jpg" alt="">
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item wow fadeInRight">
+            <div class="accordion-trigger" id="headingSix">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">YouTube</button>
+            </div>
+            <div id="collapse3" class="collapse" aria-labelledby="headingSix" data-parent="#accordionFAQ">
+              <div class="accordion-content">
+                <ol>
+                  <li><p>Copy the URL of the video and click submit:</p></li>
+                  <img src="{% static '' %}assets/img/Capture d’écran (46).jpg" alt="">
+                  <li>Put the URL here:</li>
+                  <img src="{% static '' %}assets/img/Capture d’écran (88).jpg" alt="">
+                </ol>
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item wow fadeInRight">
+            <div class="accordion-trigger" id="headingSeven">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Twitter</button>
+            </div>
+            <div id="collapse4" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionFAQ">
+              <div class="accordion-content">
+                <ol>
+                  <li><p>Copy the profile name and click submit:</p></li>
+                  <img src="{% static '' %}assets/img/Capture d’écran (75).jpg" alt="">
+                  <li>Put it here</li>
+                  <img src="{% static '' %}assets/img/Capture d’écran (89).jpg" alt="">
+                </ol>
+                <p>The types of cards accepted by Google services vary by location and product.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item wow fadeInRight">
+            <div class="accordion-trigger" id="headingEight">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">If your comments are not in English</button>
+            </div>
+            <div id="collapse5" class="collapse" aria-labelledby="headingEight" data-parent="#accordionFAQ">
+              <div class="accordion-content">
+                <p><B>change the language parameter from English to another language</B></br> (it takes more time than in English):</p>
+
+                <img src="{% static '' %}assets/img/Capture d’écran (90).jpg" alt="">
+                  
+                <p>and select other languages</p>
+                <img src="{% static '' %}assets/img/Capture d’écran (92).jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item wow fadeInRight">
+            <div class="accordion-trigger" id="headingNine">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">You can change the number of comments</button>
+            </div>
+            <div id="collapse6" class="collapse" aria-labelledby="headingNine" data-parent="#accordionFAQ">
+              <div class="accordion-content">
+                <p>50 comments selected by default so you can change it </p>
+                <img src="{% static '' %}assets/img/Capture d’écran (93).jpg" alt="">
+                <p>To change it </p>
+                <img src="{% static '' %}assets/img/Capture d’écran (94).jpg" alt="">
+
+                <p>you can analyse all comments </p>
+                <img src="{% static '' %}assets/img/Capture d’écran (123).jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <p class="fg-primary fw-medium">Need more helps?</p>
+          <a href="/contactus/" class="btn btn-gradient btn-split-icon rounded-pill">
+            <span class="icon mai-call-outline"></span> Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+{% endblock %} 
